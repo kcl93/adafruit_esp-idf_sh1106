@@ -1932,3 +1932,19 @@ void GFXcanvas16::fillScreen(uint16_t color) {
     }
 }
 
+
+
+void Adafruit_GFX::print(const char *s)
+{
+	print((char*)s);
+}
+
+
+void Adafruit_GFX::print(char *s)
+{
+	while(*s != 0x00)
+	{
+		write(*s);
+		s++;
+	}
+}
